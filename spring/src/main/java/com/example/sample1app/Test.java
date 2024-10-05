@@ -1,4 +1,5 @@
 package com.example.sample1app;
 
-public class Test {
+public class Test extends Sample1appApplication{
+
 }

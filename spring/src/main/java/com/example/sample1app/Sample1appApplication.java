@@ -11,7 +11,10 @@ public class Sample1appApplication {
 
   @RequestMapping("/")
   public String home() {
-    return "Hello World";
+    // public void text(String body){
+    //   System.out.println(body);
+    // }
+    return "いくぜぇー！燃え尽きろ！はぁああ！神龍烈波！";
   }
 
   public static void main(String[] args) {
