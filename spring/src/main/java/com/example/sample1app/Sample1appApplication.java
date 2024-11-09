@@ -1,22 +1,30 @@
 package com.example.sample1app;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.sample1app.entity.UserEntity;
+import com.example.sample1app.repository.UserRepository;
+
 @SpringBootApplication
 @RestController
 public class Sample1appApplication {
 
+  @Autowired
+  UserRepository userRepository;
+
   @RequestMapping("/")
   public String home() {
-    return "Hello world";
+    return "Hello World";
   }
 
-  @RequestMapping("/test")
-  public String test() {
-    return "Test_Page";
+  @RequestMapping("/men")
+  public String men() {
+    UserEntity user = userRepository.findUserById(0);
+    return String.format("ID=%d", user.getId());
   }
 
   public static void main(String[] args) {
