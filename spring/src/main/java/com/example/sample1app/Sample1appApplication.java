@@ -1,5 +1,4 @@
 package com.example.sample1app;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,11 +10,14 @@ public class Sample1appApplication {
 
   @RequestMapping("/")
   public String home() {
-    // public void text(String body){
-    //   System.out.println(body);
-    // }
-    return "いくぜぇー！燃え尽きろ！はぁああ！神龍烈波！";
+    return "Hello World";
   }
+
+  // @RequestMapping("/men")
+  // public String men() {
+  //   UserEntity user = userRepository.findUserById(0);
+  //   return String.format("ID=%d", user.getId());
+  // }
 
   public static void main(String[] args) {
     SpringApplication.run(Sample1appApplication.class, args);
